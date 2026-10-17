@@ -7,9 +7,9 @@ import tensorflow as tf
 from preprocessing import prepare
 
 # --- Config via environment variables, so swapping in the champion model needs no code change ---
-MODEL_PATH = os.getenv("MODEL_PATH", "model/cnn_model.keras")   # path to the saved .keras model
-PREPROCESS = os.getenv("PREPROCESS", "scratch")                 # scratch | vgg16 | resnet50 (must match the model)
-THRESHOLD = float(os.getenv("THRESHOLD", "0.5"))                # cut-off for flagging pneumonia
+MODEL_PATH = os.getenv("MODEL_PATH", "model/final_model.keras")   # path to the saved .keras model
+PREPROCESS = os.getenv("PREPROCESS", "resnet50")                 # scratch | vgg16 | resnet50 (must match the model)
+THRESHOLD = float(os.getenv("THRESHOLD", "0.29"))                # cut-off for flagging pneumonia
 
 st.set_page_config(page_title="Pneumonia Detection", page_icon="🏥", layout="centered")
 

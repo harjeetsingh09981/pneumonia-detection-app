@@ -14,9 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Defaults; override at run time with -e to switch to the champion model
-ENV MODEL_PATH=model/cnn_model.keras \
-    PREPROCESS=scratch \
-    THRESHOLD=0.5
+ENV MODEL_PATH=model/final_model.keras \
+    PREPROCESS=resnet50 \
+    THRESHOLD=0.29
 
 EXPOSE 8501
 CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
