@@ -1,0 +1,7 @@
+# Pin tensorflow-cpu to the SAME version as Colab (run tf.__version__ there), so the saved .keras model loads cleanly
+tensorflow-cpu==2.19.0
+streamlit
+opencv-python-headless
+pydicom
+pillow
+numpy

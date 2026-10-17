@@ -1,0 +1,4 @@
+# Model 1 file is >100 MB: keep it out of Git (copy it into model/ manually)
+model/cnn_model.keras
+__pycache__/
+*.pyc
