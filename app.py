@@ -11,7 +11,7 @@ MODEL_PATH = os.getenv("MODEL_PATH", "model/cnn_model.keras")   # path to the sa
 PREPROCESS = os.getenv("PREPROCESS", "scratch")                 # scratch | vgg16 | resnet50 (must match the model)
 THRESHOLD = float(os.getenv("THRESHOLD", "0.5"))                # cut-off for flagging pneumonia
 
-st.set_page_config(page_title="Pneumonia Detection", page_icon="🫁", layout="centered")
+st.set_page_config(page_title="Pneumonia Detection", page_icon="🏥", layout="centered")
 
 
 @st.cache_resource   # load once per container, not on every upload
@@ -19,7 +19,7 @@ def load_model(path):
     return tf.keras.models.load_model(path, compile=False)
 
 
-st.title("🫁 Pneumonia Detection from Chest X-Rays")
+st.title("Pneumonia Detection from Chest X-Rays")
 st.caption("Decision-support prototype: a second opinion for radiologists, not a diagnosis.")
 
 if not os.path.exists(MODEL_PATH):
